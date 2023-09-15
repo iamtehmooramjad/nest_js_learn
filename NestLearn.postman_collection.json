@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "d8e93d81-1e58-4940-afe9-09d96254d4ad",
+		"name": "NestLearn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "Get Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlaG1vb3IiLCJpYXQiOjE2OTQ3ODUyMjMsImV4cCI6MTY5NDc4ODgyM30.LuxAmjCRnoopAbMSW7eCt7H_8w0hh6qFgXETb4pyfbU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vaHNpbiIsImlhdCI6MTY5NDc4NTA2OSwiZXhwIjoxNjk0Nzg4NjY5fQ.2qEMvjwsTtIqg3iVa2L74BzpF4oIL6Fb5jbhnliYE4M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "This is mohsin task",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "This is mohsin task description ",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vaHNpbiIsImlhdCI6MTY5NDc4NTA2OSwiZXhwIjoxNjk0Nzg4NjY5fQ.2qEMvjwsTtIqg3iVa2L74BzpF4oIL6Fb5jbhnliYE4M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks/da7db6a5-3de8-42dd-b3af-9b815b1e956f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"da7db6a5-3de8-42dd-b3af-9b815b1e956f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tasks/dc07bb39-3c58-4bf5-996b-34bcd7b5aa45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"dc07bb39-3c58-4bf5-996b-34bcd7b5aa45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "IN_PROGRESS",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/04fc420f-7aca-4071-8eaa-78c03b8d99c2/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"04fc420f-7aca-4071-8eaa-78c03b8d99c2",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "tehmoor",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Tehmoor1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "tehmoor",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Tehmoor1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
